@@ -121,13 +121,13 @@ public class CartService {
         customerRepository.save(customer);
 
         //send an email
-        String text="Congrats! your order with total value "+totalCost+" has been placed";
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("formy***useandproj@gmail.com");
-        message.setTo(customer.getEmail());
-        message.setSubject("Order placed");
-        message.setText(text);
-        emailSender.send(message);
+//        String text="Congrats! your order with total value "+totalCost+" has been placed";
+//        SimpleMailMessage message = new SimpleMailMessage();
+//        message.setFrom("formy***useandproj@gmail.com");
+//        message.setTo(customer.getEmail());
+//        message.setSubject("Order placed");
+//        message.setText(text);
+//        emailSender.send(message);
 
         return orderResponseDTOList;
     }

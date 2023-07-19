@@ -67,6 +67,7 @@ public class OrderService {
         item.setReqQuantity(orderRequestDTO.getRequiredQuantity());
         item.setProduct(product);
         item.setOrder(order);
+
         order.getItemList().add(item);
         order.setCustomer(customer);
 
@@ -91,13 +92,13 @@ public class OrderService {
                 .build();
 
         //send an email
-        String text="Congrats! your order with total value "+order.getTotalCost()+" has been placed";
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("formy***useandproj@gmail.com");
-        message.setTo(customer.getEmail());
-        message.setSubject("Order placed");
-        message.setText(text);
-        emailSender.send(message);
+//        String text="Congrats! your order with total value "+order.getTotalCost()+" has been placed";
+//        SimpleMailMessage message = new SimpleMailMessage();
+//        message.setFrom("formy***useandproj@gmail.com");
+//        message.setTo(customer.getEmail());
+//        message.setSubject("Order placed");
+//        message.setText(text);
+//        emailSender.send(message);
 
         return orderResponseDTO;
     }
